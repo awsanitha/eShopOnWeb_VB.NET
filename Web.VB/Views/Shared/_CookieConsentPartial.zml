@@ -4,7 +4,7 @@
    <z:invoke method="Context.Features.Get(Of ITrackingConsentFeature)"/>
 </z:declare>
 <z:declare var="showBanner">
-    <z:check condition="not consentFeature?.CanTrack" ifnull="false" />
+    <z:check condition="!consentFeature?.CanTrack" ifnull="false" />
 </z:declare>
 <z:declare cookieString="consentFeature?.CreateConsentCookie()"  />
 

@@ -47,7 +47,7 @@ Namespace Data
                     retryForAvailability += 1
                     Dim log = loggerFactory.CreateLogger(Of CatalogContextSeed)()
                     log.LogError(ex.Message)
-                    Task.Run(Sub() SeedAsync(catalogContext, loggerFactory, retryForAvailability)).Wait()
+                    SeedAsync(catalogContext, loggerFactory, retryForAvailability).GetAwaiter().GetResult()
                 End If
                 Throw
             End Try

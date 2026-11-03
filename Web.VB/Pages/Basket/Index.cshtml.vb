@@ -33,7 +33,7 @@ Namespace Pages.Basket
             Get
                 ViewData("Title") = Title
                 Dim html = Me.GetVbXml().ParseZML()
-                Return VazorPage.CreateNew("Index", "Pages\Basket", Title, html)
+                Return VazorPage.CreateNew("Index", "Pages/Basket", Title, html)
             End Get
         End Property
 

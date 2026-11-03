@@ -9,10 +9,6 @@ Namespace Exceptions
             MyBase.New($"No basket found with id {basketId}")
         End Sub
 
-        Protected Sub New(info As System.Runtime.Serialization.SerializationInfo, context As System.Runtime.Serialization.StreamingContext)
-            MyBase.New(info, context)
-        End Sub
-
         Public Sub New(message As String)
             MyBase.New(message)
         End Sub
