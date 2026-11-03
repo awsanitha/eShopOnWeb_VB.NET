@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = Microsoft.eShopWeb.Web
+build_property.ProjectDir = /data/code/Web.VB/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 
