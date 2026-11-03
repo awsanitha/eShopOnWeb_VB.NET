@@ -1,0 +1,13 @@
+/data/code/ApplicationCore.vb/bin/Release/net10.0/ApplicationCore.vb.deps.json
+/data/code/ApplicationCore.vb/bin/Release/net10.0/ApplicationCore.vb.dll
+/data/code/ApplicationCore.vb/bin/Release/net10.0/ApplicationCore.vb.pdb
+/data/code/ApplicationCore.vb/obj/Release/net10.0/ApplicationCore.vb.vbproj.AssemblyReference.cache
+/data/code/ApplicationCore.vb/obj/Release/net10.0/ApplicationCore.vb.GeneratedMSBuildEditorConfig.editorconfig
+/data/code/ApplicationCore.vb/obj/Release/net10.0/ApplicationCore.vb.AssemblyInfoInputs.cache
+/data/code/ApplicationCore.vb/obj/Release/net10.0/ApplicationCore.vb.AssemblyInfo.vb
+/data/code/ApplicationCore.vb/obj/Release/net10.0/ApplicationCore.vb.vbproj.CoreCompileInputs.cache
+/data/code/ApplicationCore.vb/obj/Release/net10.0/ApplicationCore.vb.sourcelink.json
+/data/code/ApplicationCore.vb/obj/Release/net10.0/ApplicationCore.vb.dll
+/data/code/ApplicationCore.vb/obj/Release/net10.0/refint/ApplicationCore.vb.dll
+/data/code/ApplicationCore.vb/obj/Release/net10.0/ApplicationCore.vb.pdb
+/data/code/ApplicationCore.vb/obj/Release/net10.0/ref/ApplicationCore.vb.dll

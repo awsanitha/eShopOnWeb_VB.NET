@@ -19,7 +19,7 @@ Imports Microsoft.Extensions.Configuration
 Imports Microsoft.Extensions.DependencyInjection
 Imports Microsoft.Extensions.Diagnostics.HealthChecks
 Imports Microsoft.Extensions.Hosting
-Imports Newtonsoft.Json
+Imports System.Text.Json
 Imports Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
 Imports System.Net.Mime
 Imports Microsoft.eShopWeb.Web.ViewModels
@@ -132,7 +132,7 @@ Public Class Startup
 
         app.UseHealthChecks("/health", New HealthCheckOptions With {
             .ResponseWriter = Async Function(context, report)
-                                  Dim result = JsonConvert.SerializeObject(New With {
+                                  Dim result = JsonSerializer.Serialize(New With {
                                                Key .status = report.Status.ToString(),
                                                Key .errors = report.Entries.[Select](Function(e) New With {
                                                Key .key = e.Key,
@@ -147,7 +147,7 @@ Public Class Startup
         If env.IsDevelopment() Then
             app.UseDeveloperExceptionPage()
             app.UseShowAllServicesMiddleware()
-            app.UseDatabaseErrorPage()
+            app.UseMigrationsEndPoint()
         Else
             app.UseExceptionHandler("/Error")
             app.UseHsts()
