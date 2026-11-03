@@ -19,7 +19,7 @@ Imports Microsoft.Extensions.Configuration
 Imports Microsoft.Extensions.DependencyInjection
 Imports Microsoft.Extensions.Diagnostics.HealthChecks
 Imports Microsoft.Extensions.Hosting
-Imports Newtonsoft.Json
+Imports System.Text.Json
 Imports Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation
 Imports System.Net.Mime
 Imports Microsoft.eShopWeb.Web.ViewModels
@@ -89,11 +89,12 @@ Public Class Startup
         .Title = "My API",
         .Version = "v1"
     }))
+        services.AddDatabaseDeveloperPageExceptionFilter()
         services.AddHealthChecks()
-        services.Configure(Of ServiceConfig)(Function(config)
+        services.Configure(Of ServiceConfig)(Sub(config)
                                                  config.Services = New List(Of ServiceDescriptor)(services)
                                                  config.Path = "/allservices"
-                                             End Function)
+                                             End Sub)
         _services = services
     End Sub
 
@@ -110,11 +111,11 @@ Public Class Startup
     End Sub
 
     Private Shared Sub ConfigureCookieSettings(ByVal services As IServiceCollection)
-        services.Configure(Of CookiePolicyOptions)(Function(options)
+        services.Configure(Of CookiePolicyOptions)(Sub(options)
                                                        options.CheckConsentNeeded = Function(context) True
                                                        options.MinimumSameSitePolicy = SameSiteMode.None
-                                                   End Function)
-        services.ConfigureApplicationCookie(Function(options)
+                                                   End Sub)
+        services.ConfigureApplicationCookie(Sub(options)
                                                 options.Cookie.HttpOnly = True
                                                 options.ExpireTimeSpan = TimeSpan.FromHours(1)
                                                 options.LoginPath = "/Account/Login"
@@ -122,7 +123,7 @@ Public Class Startup
                                                 options.Cookie = New CookieBuilder With {
                                                     .IsEssential = True
                                                 }
-                                            End Function)
+                                            End Sub)
     End Sub
 
     Public Sub Configure(ByVal app As IApplicationBuilder, ByVal env As IWebHostEnvironment)
@@ -131,8 +132,8 @@ Public Class Startup
         Vazor.VazorSharedView.CreateAll()
 
         app.UseHealthChecks("/health", New HealthCheckOptions With {
-            .ResponseWriter = Async Function(context, report)
-                                  Dim result = JsonConvert.SerializeObject(New With {
+            .ResponseWriter = Async Function(context, report) As Task
+                                  Dim result = JsonSerializer.Serialize(New With {
                                                Key .status = report.Status.ToString(),
                                                Key .errors = report.Entries.[Select](Function(e) New With {
                                                Key .key = e.Key,
@@ -147,7 +148,7 @@ Public Class Startup
         If env.IsDevelopment() Then
             app.UseDeveloperExceptionPage()
             app.UseShowAllServicesMiddleware()
-            app.UseDatabaseErrorPage()
+            app.UseMigrationsEndPoint()
         Else
             app.UseExceptionHandler("/Error")
             app.UseHsts()
@@ -160,14 +161,14 @@ Public Class Startup
         app.UseAuthentication()
         app.UseAuthorization()
         app.UseSwagger()
-        app.UseSwaggerUI(Function(c)
+        app.UseSwaggerUI(Sub(c)
                              c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1")
-                         End Function)
-        app.UseEndpoints(Function(endpoints)
+                         End Sub)
+        app.UseEndpoints(Sub(endpoints)
                              endpoints.MapControllerRoute("default", "{controller:slugify=Home}/{action:slugify=Index}/{id?}")
                              endpoints.MapRazorPages()
                              endpoints.MapHealthChecks("home_page_health_check")
                              endpoints.MapHealthChecks("api_health_check")
-                         End Function)
+                         End Sub)
     End Sub
 End Class

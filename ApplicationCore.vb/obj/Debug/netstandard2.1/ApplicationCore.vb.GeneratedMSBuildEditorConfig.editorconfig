@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = Microsoft.eShopWeb.ApplicationCore
+build_property.ProjectDir = /data/code/ApplicationCore.vb/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 

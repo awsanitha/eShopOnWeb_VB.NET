@@ -27,7 +27,7 @@ Namespace Controllers
 
         <HttpGet>
         <AllowAnonymous>
-        Public Async Function SignIn(ByVal Optional returnUrl As String = Nothing) As Task(Of IActionResult)
+        Public Overloads Async Function SignIn(ByVal Optional returnUrl As String = Nothing) As Task(Of IActionResult)
             Await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme)
             ViewData("ReturnUrl") = returnUrl
 
@@ -41,7 +41,7 @@ Namespace Controllers
         <HttpPost>
         <AllowAnonymous>
         <ValidateAntiForgeryToken>
-        Public Async Function SignIn(ByVal model As LoginViewModel, ByVal Optional returnUrl As String = Nothing) As Task(Of IActionResult)
+        Public Overloads Async Function SignIn(ByVal model As LoginViewModel, ByVal Optional returnUrl As String = Nothing) As Task(Of IActionResult)
             If Not ModelState.IsValid Then
                 Return View(model)
             End If
@@ -123,7 +123,7 @@ Namespace Controllers
 
         <HttpPost>
         <ValidateAntiForgeryToken>
-        Public Async Function SignOut() As Task(Of ActionResult)
+        Public Overloads Async Function SignOut() As Task(Of ActionResult)
             Await _signInManager.SignOutAsync()
             Return RedirectToPage("/Index")
         End Function
