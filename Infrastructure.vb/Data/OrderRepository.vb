@@ -17,7 +17,7 @@ Namespace Data
         Public Function GetByIdWithItemsAsync(id As Integer) As Task(Of Order) Implements IOrderRepository.GetByIdWithItemsAsync
             Return _dbContext.Orders.
                         Include(Function(o) o.OrderItems).
-                        Include($"{NameOf(Order.OrderItems)}.{NameOf(OrderItem.ItemOrdered)}").
+                        ThenInclude(Function(i) i.ItemOrdered).
                         FirstOrDefaultAsync(Function(x) x.Id = id)
         End Function
     End Class

@@ -22,7 +22,7 @@ Namespace Data.Config
 
             builder.Property(NameOf(CatalogItem.Price)
                 ).IsRequired(True).
-                  HasColumnType("deCatalogItemmal(18,2)")
+                  HasColumnType("decimal(18,2)")
 
             builder.Property(
                 NameOf(CatalogItem.PictureUri)
