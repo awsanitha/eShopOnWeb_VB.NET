@@ -1,35 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "F:\\_VS.NET\\Vazor 3\\eShopOnWeb.vazor\\ApplicationCore.vb\\ApplicationCore.vb.vbproj": {}
+    "/data/code/ApplicationCore.vb/ApplicationCore.vb.vbproj": {}
   },
   "projects": {
-    "F:\\_VS.NET\\Vazor 3\\eShopOnWeb.vazor\\ApplicationCore.vb\\ApplicationCore.vb.vbproj": {
+    "/data/code/ApplicationCore.vb/ApplicationCore.vb.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\_VS.NET\\Vazor 3\\eShopOnWeb.vazor\\ApplicationCore.vb\\ApplicationCore.vb.vbproj",
+        "projectUniqueName": "/data/code/ApplicationCore.vb/ApplicationCore.vb.vbproj",
         "projectName": "ApplicationCore.vb",
-        "projectPath": "F:\\_VS.NET\\Vazor 3\\eShopOnWeb.vazor\\ApplicationCore.vb\\ApplicationCore.vb.vbproj",
-        "packagesPath": "C:\\Users\\MHG\\.nuget\\packages\\",
-        "outputPath": "F:\\_VS.NET\\Vazor 3\\eShopOnWeb.vazor\\ApplicationCore.vb\\obj\\",
+        "projectPath": "/data/code/ApplicationCore.vb/ApplicationCore.vb.vbproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/data/code/ApplicationCore.vb/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MHG\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://dotnet.myget.org/F/roslyn/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
+            "framework": "netstandard2.1",
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -37,10 +33,18 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "netstandard2.1": {
+          "framework": "netstandard2.1",
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Ardalis.GuardClauses": {
               "target": "Package",
@@ -57,7 +61,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -66,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.403/RuntimeIdentifierGraph.json"
         }
       }
     }
