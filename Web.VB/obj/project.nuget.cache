@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1Ex06EKWylY=",
+  "dgSpecHash": "PiSIINJcVnw=",
   "success": true,
   "projectFilePath": "/data/code/Web.VB/Web.VB.vbproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "/root/.nuget/packages/ardalis.liststartupservices/1.1.4/ardalis.liststartupservices.1.1.4.nupkg.sha512",
     "/root/.nuget/packages/azure.core/1.50.0/azure.core.1.50.0.nupkg.sha512",
     "/root/.nuget/packages/azure.identity/1.17.1/azure.identity.1.17.1.nupkg.sha512",
+    "/root/.nuget/packages/buildbundlerminifier/3.2.449/buildbundlerminifier.3.2.449.nupkg.sha512",
     "/root/.nuget/packages/humanizer/2.14.1/humanizer.2.14.1.nupkg.sha512",
     "/root/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/root/.nuget/packages/humanizer.core.af/2.14.1/humanizer.core.af.2.14.1.nupkg.sha512",

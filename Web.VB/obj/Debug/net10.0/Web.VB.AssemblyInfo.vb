@@ -17,7 +17,7 @@ Imports System.Reflection
  Assembly: System.Reflection.AssemblyCompanyAttribute("Web.VB"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca4e39ec37b24039929f8d725a2aac59c66829e9"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9c4864b9a89c6b86d143b4be895a497d7fce18f"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Web.VB"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Web.VB"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")> 
