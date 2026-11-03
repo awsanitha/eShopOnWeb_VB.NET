@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "ApplicationCore.vb/1.0.0": {
+        "dependencies": {
+          "Ardalis.GuardClauses": "4.6.0"
+        },
+        "runtime": {
+          "ApplicationCore.vb.dll": {}
+        }
+      },
+      "Ardalis.GuardClauses/4.6.0": {
+        "runtime": {
+          "lib/net8.0/Ardalis.GuardClauses.dll": {
+            "assemblyVersion": "4.6.0.0",
+            "fileVersion": "4.6.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ApplicationCore.vb/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ardalis.GuardClauses/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ckLr6V8tRXHu0kGVlen70sjXkZcbe6ZFknM3UDkeNzY75kXEe4Z5xru5weMU5IEAsuuqMKvVb7ikbUZ7JcHUSQ==",
+      "path": "ardalis.guardclauses/4.6.0",
+      "hashPath": "ardalis.guardclauses.4.6.0.nupkg.sha512"
+    }
+  }
+}
