@@ -10,7 +10,7 @@ Public Class ExternalLoginsView
     Public ReadOnly Property ViewData() As ViewDataDictionary
 
     Public Sub New(model As ExternalLoginsViewModel, viewData As ViewDataDictionary)
-        MyBase.New("ExternalLogins", "Views\Home", "Hello")
+        MyBase.New("ExternalLogins", "Views/Home", "Hello")
         Me.Model = model
         Me.ViewData = viewData
         viewData(Views.Manage.ActivePageKey) = Views.Manage.ExternalLogins

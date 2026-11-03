@@ -2,8 +2,8 @@
 
 Namespace Extensions
     Module CacheHelpers
-        Public Shared ReadOnly DefaultCacheDuration As TimeSpan = TimeSpan.FromSeconds(30)
-        Private Shared ReadOnly _itemsKeyTemplate As String = "items-{0}-{1}-{2}-{3}"
+        Public ReadOnly DefaultCacheDuration As TimeSpan = TimeSpan.FromSeconds(30)
+        Private ReadOnly _itemsKeyTemplate As String = "items-{0}-{1}-{2}-{3}"
 
         Function GenerateCatalogItemCacheKey(ByVal pageIndex As Integer, ByVal itemsPage As Integer, ByVal brandId As Integer?, ByVal typeId As Integer?) As String
             Return String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandId, typeId)

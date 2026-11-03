@@ -31,7 +31,7 @@ Namespace Areas.Identity.Pages.Account
             Get
                 ViewData("Title") = Title
                 Dim html = Me.GetVbXml().ParseZML()
-                Return VazorPage.CreateNew("Login", "Areas\Identity\Pages\Account", Title, html)
+                Return VazorPage.CreateNew("Login", "Areas/Identity/Pages/Account", Title, html)
             End Get
         End Property
 
